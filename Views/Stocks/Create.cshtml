@@ -1,0 +1,158 @@
+﻿@model CodeSaint.Models.Stock
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Stock</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ticker" class="control-label"></label>
+                <input asp-for="Ticker" class="form-control" />
+                <span asp-validation-for="Ticker" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Price" class="control-label"></label>
+                <input asp-for="Price" class="form-control" />
+                <span asp-validation-for="Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OneYearHistoricalAverage" class="control-label"></label>
+                <input asp-for="OneYearHistoricalAverage" class="form-control" />
+                <span asp-validation-for="OneYearHistoricalAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FiveYearHistoricalAverage" class="control-label"></label>
+                <input asp-for="FiveYearHistoricalAverage" class="form-control" />
+                <span asp-validation-for="FiveYearHistoricalAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TenYearHistoricalAverage" class="control-label"></label>
+                <input asp-for="TenYearHistoricalAverage" class="form-control" />
+                <span asp-validation-for="TenYearHistoricalAverage" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MarketCap" class="control-label"></label>
+                <input asp-for="MarketCap" class="form-control" />
+                <span asp-validation-for="MarketCap" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PERatio" class="control-label"></label>
+                <input asp-for="PERatio" class="form-control" />
+                <span asp-validation-for="PERatio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EPS" class="control-label"></label>
+                <input asp-for="EPS" class="form-control" />
+                <span asp-validation-for="EPS" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Debt" class="control-label"></label>
+                <input asp-for="Debt" class="form-control" />
+                <span asp-validation-for="Debt" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProfitMarginGrowth" class="control-label"></label>
+                <input asp-for="ProfitMarginGrowth" class="form-control" />
+                <span asp-validation-for="ProfitMarginGrowth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RevenueGrowth" class="control-label"></label>
+                <input asp-for="RevenueGrowth" class="form-control" />
+                <span asp-validation-for="RevenueGrowth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NetIncomeGrowth" class="control-label"></label>
+                <input asp-for="NetIncomeGrowth" class="form-control" />
+                <span asp-validation-for="NetIncomeGrowth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FCFGrowth" class="control-label"></label>
+                <input asp-for="FCFGrowth" class="form-control" />
+                <span asp-validation-for="FCFGrowth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ROICGrowth" class="control-label"></label>
+                <input asp-for="ROICGrowth" class="form-control" />
+                <span asp-validation-for="ROICGrowth" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HeavyInvestingRate" class="control-label"></label>
+                <input asp-for="HeavyInvestingRate" class="form-control" />
+                <span asp-validation-for="HeavyInvestingRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TwitterFlag" class="control-label"></label>
+                <input asp-for="TwitterFlag" class="form-control" />
+                <span asp-validation-for="TwitterFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RedditFlag" class="control-label"></label>
+                <input asp-for="RedditFlag" class="form-control" />
+                <span asp-validation-for="RedditFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EarningsFlag" class="control-label"></label>
+                <input asp-for="EarningsFlag" class="form-control" />
+                <span asp-validation-for="EarningsFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NewsFlag" class="control-label"></label>
+                <input asp-for="NewsFlag" class="form-control" />
+                <span asp-validation-for="NewsFlag" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InsiderHoldSellRate" class="control-label"></label>
+                <input asp-for="InsiderHoldSellRate" class="form-control" />
+                <span asp-validation-for="InsiderHoldSellRate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SuperInvestors" class="control-label"></label>
+                <input asp-for="SuperInvestors" class="form-control" />
+                <span asp-validation-for="SuperInvestors" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DCF" class="control-label"></label>
+                <input asp-for="DCF" class="form-control" />
+                <span asp-validation-for="DCF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EbitdaDCF" class="control-label"></label>
+                <input asp-for="EbitdaDCF" class="form-control" />
+                <span asp-validation-for="EbitdaDCF" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PriceToCompetition" class="control-label"></label>
+                <input asp-for="PriceToCompetition" class="form-control" />
+                <span asp-validation-for="PriceToCompetition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateAdded" class="control-label"></label>
+                <input asp-for="DateAdded" class="form-control" />
+                <span asp-validation-for="DateAdded" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

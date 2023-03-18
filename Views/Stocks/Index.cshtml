@@ -1,0 +1,179 @@
+﻿@model IEnumerable<CodeSaint.Models.Stock>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OneYearHistoricalAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FiveYearHistoricalAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenYearHistoricalAverage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MarketCap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PERatio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EPS)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Debt)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProfitMarginGrowth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RevenueGrowth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NetIncomeGrowth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FCFGrowth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ROICGrowth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HeavyInvestingRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TwitterFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RedditFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EarningsFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NewsFlag)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InsiderHoldSellRate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SuperInvestors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DCF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EbitdaDCF)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PriceToCompetition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateAdded)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OneYearHistoricalAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FiveYearHistoricalAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenYearHistoricalAverage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MarketCap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PERatio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EPS)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Debt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProfitMarginGrowth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RevenueGrowth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetIncomeGrowth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FCFGrowth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ROICGrowth)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeavyInvestingRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TwitterFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RedditFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EarningsFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NewsFlag)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InsiderHoldSellRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SuperInvestors)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DCF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EbitdaDCF)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PriceToCompetition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateAdded)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Ticker">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Ticker">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Ticker">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
