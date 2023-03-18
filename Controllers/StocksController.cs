@@ -12,11 +12,23 @@ namespace CodeSaint.Controllers
 {
     public class StocksController : Controller
     {
-        private readonly CodeSaintDbContext _StockContext;
+        private readonly ICodeSaintRepo _repository;
 
-        public StocksController(CodeSaintDbContext context)
+        public StocksController(ICodeSaintRepo repository)
         {
-            _StockContext = context;
+            _repository = repository;
+        }
+
+        [HttpPost("TestStock")]
+        public string TestStock(Stock stock)
+        {
+           return _repository.TestStock(stock);
+        }
+
+        [HttpGet("GetTestStock")]
+        public ActionResult<IEnumerable<Stock>> GetTestStock(string ticker)
+        {
+            return _repository.GetTestStock(ticker);
         }
 
     }
