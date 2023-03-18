@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Controllers",
+    "\\Data"
   ],
-  "SelectedNode": "\\CodeSaint.sln",
+  "SelectedNode": "\\Data\\CodeSaintDbContext.cs",
   "PreviewInSolutionExplorer": false
 }
