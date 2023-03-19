@@ -5,7 +5,7 @@ namespace CodeSaint.Data
 {
     public interface ICodeSaintRepo
     {
-        public string TestStock(Stock stock);
-        public ActionResult<IEnumerable<Stock>> GetTestStock(string ticker);
+        public Task<string> TestStock(Stock stock);
+        public Task<IEnumerable<Stock>> GetTestStock(string ticker);
     }
 }

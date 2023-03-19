@@ -20,17 +20,18 @@ namespace CodeSaint.Controllers
         }
 
         [HttpPost("TestStock")]
-        public string TestStock(Stock stock)
+        public async Task<IActionResult> TestStock(Stock stock)
         {
-           return _repository.TestStock(stock);
+            string addStock = await _repository.TestStock(stock);
+            return (addStock != "") ? Ok(addStock) : BadRequest(addStock);
         }
 
         [HttpGet("GetTestStock")]
-        public ActionResult<IEnumerable<Stock>> GetTestStock(string ticker)
+        public async Task<IActionResult> GetTestStock(string ticker)
         {
-            return _repository.GetTestStock(ticker);
+            IEnumerable<Stock> s = await _repository.GetTestStock(ticker);
+            return (s != null) ? Ok(s) : NotFound(s);
         }
-
     }
 }
 

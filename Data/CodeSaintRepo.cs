@@ -1,5 +1,6 @@
 ﻿using CodeSaint.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeSaint.Data
 {
@@ -12,16 +13,17 @@ namespace CodeSaint.Data
             _dbContext = dbContext;
         }
 
-        public string TestStock(Stock stock)
+        public async Task<string> TestStock(Stock stock)
         {
             _dbContext.Stocks.Add(stock);
-            _dbContext.SaveChanges();
-            return "Stock added to DB successfully.";
+            int numAdded = await _dbContext.SaveChangesAsync();
+            return (numAdded > 0) ? "Stock added to DB successfully." : "Stock could not be added, please check your inputted stock data";
         }
 
-        public ActionResult<IEnumerable<Stock>> GetTestStock(string ticker)
+        public async Task<IEnumerable<Stock>> GetTestStock(string ticker)
         {
-            return _dbContext.Stocks.Where(x => x.Ticker == ticker).ToList();
+            IEnumerable<Stock> s = await _dbContext.Stocks.Where(x => x.Ticker == ticker).ToListAsync();
+            return (!s.Any()) ? null : s;
         }
 
     }

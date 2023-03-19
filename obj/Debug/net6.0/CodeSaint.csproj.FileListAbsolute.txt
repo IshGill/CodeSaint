@@ -289,3 +289,6 @@ C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\bin\Debug\net6.0\zh-Hans\Mic
 C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\obj\Debug\net6.0\CodeSaint.RazorAssemblyInfo.cache
 C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\obj\Debug\net6.0\CodeSaint.RazorAssemblyInfo.cs
+C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\bin\Debug\net6.0\Microsoft.Threading.Tasks.Extensions.dll
+C:\Users\ish-g\Desktop\Projects\CodeSaint\CodeSaint\bin\Debug\net6.0\Microsoft.Threading.Tasks.dll
